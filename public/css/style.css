@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 2px solid #eee;
+}
+
+.logo {
+  height: 70px;
+  cursor: pointer;
+}
+
+.parent-logo {
+  height: 60px;
+}
+
+/* SIDE MENU */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  border-right: 3px solid #7b2cbf;
+  transition: 0.3s;
+  padding: 1rem;
+  z-index: 999;
+}
+
+#sideMenu.open {
+  left: 0;
+}
+
+.menu-logo {
+  width: 80px;
+}
+
+.side-nav a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  color: #7b2cbf;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+  color: #fff;
+}
+
+.btn {
+  background: #fff;
+  color: #7b2cbf;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* ABOUT PAGE */
+.about-flex {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.about-photo {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  border-top: 2px solid #eee;
+}
