@@ -1,4 +1,4 @@
-/* GLOBAL */
+/* GLOBAL -------------------------------------------------- */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -6,20 +6,19 @@ body {
   color: #eaeaea;
   overflow-x: hidden;
 
-  /* Faint background logo */
   background-image: url('/img/expression-of-hope.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 600px;
+  background-size: 650px;
   background-attachment: fixed;
-  opacity: 0.98;
+  opacity: 0.99;
 }
 
-/* CLASSY CURSIVE HEADERS */
+/* HEADERS -------------------------------------------------- */
 h1, h2, h3 {
   font-family: 'Great Vibes', cursive;
   letter-spacing: 2px;
-  color: #ffffff;
+  color: #fff;
   text-shadow: 0 0 12px #7b2cbf, 0 0 22px #9d4edd;
   animation: glowPulse 4s infinite ease-in-out;
 }
@@ -30,7 +29,7 @@ h1, h2, h3 {
   100% { text-shadow: 0 0 10px #7b2cbf; }
 }
 
-/* HEADER */
+/* HEADER -------------------------------------------------- */
 header {
   display: flex;
   justify-content: space-between;
@@ -56,7 +55,7 @@ header {
   opacity: 0.85;
 }
 
-/* SIDE MENU */
+/* SIDE MENU -------------------------------------------------- */
 #sideMenu {
   position: fixed;
   top: 0;
@@ -87,16 +86,15 @@ header {
   font-size: 1.4rem;
   color: #d8b4ff;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
   transition: 0.3s;
 }
 
 .side-nav a:hover {
-  color: #ffffff;
+  color: #fff;
   text-shadow: 0 0 12px #7b2cbf;
 }
 
-/* HERO */
+/* HERO -------------------------------------------------- */
 .hero {
   text-align: center;
   padding: 6rem 2rem;
@@ -112,7 +110,7 @@ header {
   line-height: 1.7rem;
 }
 
-/* BUTTON */
+/* BUTTON -------------------------------------------------- */
 .btn {
   background: #7b2cbf;
   color: #fff;
@@ -131,47 +129,70 @@ header {
   box-shadow: 0 0 20px #9d4edd;
 }
 
-/* ABOUT PAGE */
-.about-flex {
+/* CARD SYSTEM -------------------------------------------------- */
+.card-grid {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
   padding: 2rem;
-  align-items: flex-start;
 }
 
-.about-photo {
-  width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #7b2cbf;
+.card {
+  width: 330px;
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 14px;
+  box-shadow: 0 0 18px #7b2cbf;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
 }
 
-.about-text {
-  font-size: 1.2rem;
-  line-height: 1.9rem;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 28px #9d4edd;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #7b2cbf;
+}
+
+.card-title {
+  background: linear-gradient(90deg, #7b2cbf, #9d4edd);
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.card-desc {
+  display: none;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.7rem;
   color: #eaeaea;
 }
 
-/* GALLERY GRID */
-.grid, .products {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
+.card-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #d8b4ff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.grid img, .products img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 15px #7b2cbf;
-  transition: 0.3s ease;
+.card-link:hover {
+  color: #fff;
+  text-shadow: 0 0 12px #7b2cbf;
 }
 
-.grid img:hover, .products img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #9d4edd;
-}
-
-/* CONTACT FORM */
+/* CONTACT FORM -------------------------------------------------- */
 form input, form textarea {
   width: 100%;
   padding: 1rem;
@@ -200,7 +221,7 @@ form button:hover {
   box-shadow: 0 0 20px #9d4edd;
 }
 
-/* FOOTER */
+/* FOOTER -------------------------------------------------- */
 footer {
   text-align: center;
   padding: 2rem;
@@ -209,17 +230,34 @@ footer {
   color: #d8b4ff;
 }
 
-/* MOBILE */
+/* FLOATING CONTACT BUTTONS -------------------------------------------------- */
+#contactFloat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.float-btn {
+  background: #7b2cbf;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 0 12px #7b2cbf;
+  transition: 0.3s;
+}
+
+.float-btn:hover {
+  background: #9d4edd;
+  box-shadow: 0 0 20px #9d4edd;
+}
+
+/* MOBILE -------------------------------------------------- */
 @media (max-width: 768px) {
-  .about-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-photo {
-    margin: 0 auto;
-  }
-
   header {
     flex-direction: column;
     gap: 1rem;
@@ -231,5 +269,13 @@ footer {
 
   .parent-logo {
     height: 50px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
   }
 }
