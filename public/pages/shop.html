@@ -17,39 +17,91 @@
 
 <body>
 
+  <!-- SIDE MENU -->
   <aside id="sideMenu">
     <div class="menu-header">
       <img src="/img/expression-of-hope-logo.png" class="menu-logo">
       <h3>Expression of Hope</h3>
     </div>
     <nav class="side-nav">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="shop.html">Shop</a>
-      <a href="about.html">About Jaryn</a>
-      <a href="contact.html">Contact</a>
+      <a href="/index.html">Home</a>
+      <a href="/pages/gallery.html">Gallery</a>
+      <a href="/pages/shop.html">Shop</a>
+      <a href="/pages/about.html">About Jaryn</a>
+      <a href="/pages/contact.html">Contact</a>
     </nav>
   </aside>
 
+  <!-- HEADER -->
   <header>
     <img src="/img/art-pain-logo.png" class="logo" id="logoClick">
     <img src="/img/expression-of-hope-logo.png" class="parent-logo">
   </header>
 
+  <!-- SHOP -->
   <section class="shop">
     <h2>Shop Artwork</h2>
     <p>
-      Prints, originals, digital downloads, and custom commissions.  
-      Every piece reflects emotion, movement, and the raw beauty of creation.
+      This shop will allow visitors to purchase prints, originals, digital downloads,  
+      and request custom commissions. Below are placeholder products showing where  
+      real items will appear once added.
     </p>
 
-    <div class="products" id="productGrid"></div>
+    <div class="products" id="productGrid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="/img/product-placeholder1.jpg" alt="Product Placeholder 1">
+        <h3>Featured Print — Your Art Here</h3>
+        <p>
+          This product slot will hold a high‑resolution print of one of your paintings or digital pieces.  
+          Customers will be able to click “Purchase” and be taken to a checkout flow (Stripe/PayPal/etc.).
+        </p>
+        <a href="mailto:hope@expressionofhope.com?subject=Purchase%20Request%20-%20Featured%20Print" class="btn">
+          Purchase Request (Email)
+        </a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="/img/product-placeholder2.jpg" alt="Product Placeholder 2">
+        <h3>Original Canvas — Your Art Here</h3>
+        <p>
+          This slot is for original canvas work. You can list size, medium, price, and availability.  
+          Buyers can email you directly to arrange payment and shipping.
+        </p>
+        <a href="mailto:hope@expressionofhope.com?subject=Purchase%20Request%20-%20Original%20Canvas" class="btn">
+          Purchase Request (Email)
+        </a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="/img/product-placeholder3.jpg" alt="Product Placeholder 3">
+        <h3>Custom Commission — Tattoos / Murals</h3>
+        <p>
+          This section is for custom work: tattoo designs, mural projects, or bespoke paintings.  
+          Visitors can click below to start a commission conversation with you.
+        </p>
+        <a href="mailto:hope@expressionofhope.com?subject=Commission%20Request" class="btn">
+          Start Commission (Email)
+        </a>
+      </div>
+
+    </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 Expression of Hope | Art In The Pain</p>
-    <p>Contact Jaryn: <strong>jarynhopearts@gmail.com</strong></p>
+    <p>Contact Jaryn: <strong>hope@expressionofhope.com</strong> | <strong>240‑595‑4019</strong></p>
   </footer>
+
+  <!-- FLOATING CONTACT BUTTON -->
+  <div id="contactFloat">
+    <a href="tel:2405954019" class="float-btn">Call</a>
+    <a href="mailto:hope@expressionofhope.com" class="float-btn">Email</a>
+  </div>
 
 </body>
 </html>
